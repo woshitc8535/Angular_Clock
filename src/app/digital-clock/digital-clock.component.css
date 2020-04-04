@@ -1,0 +1,48 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.digitalClock {
+  position: relative;
+  width: 300px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border: 20px solid #0e1111 ;
+  border-radius: 15px;
+
+}
+
+.digitalTime {
+  display: flex;
+  font-size: 29px;
+  font-family: "Cambria Math";
+}
+
+.item {
+  padding-right: 5px;
+}
+
+.dayTitle {
+  font-size: 2em;
+}
+
+.inputController {
+  display: flex;
+  font-size: 2em;
+}
+.inputWindow {
+  outline-style: none ;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 43px;
+  font-size: 29px;
+  font-family: "Cambria Math";
+}

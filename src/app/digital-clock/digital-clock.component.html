@@ -1,0 +1,22 @@
+<div class = "digitalClock">
+  <div class =  "dayTitle">
+    London Clock
+  </div>
+  <div class = "digitalTime" [style.display]="timeStart ? 'flex' : 'none'">
+    <div class="item" (click)="modifyTime()">{{format(hour)}} :</div>
+    <div class="item" (click)="modifyTime()">{{format(min)}} :</div>
+    <div class="item" (click)="modifyTime()">{{format(second)}}</div>
+    <div class="item" (click)="modifyTime()">{{ampm}}</div>
+  </div>
+
+  <div class= "inputController"  [style.display]="timeStart ? 'none' : 'block'"  >
+    <input class="inputWindow"   type= "number" maxlength="2" [(ngModel)]="hour">
+    <span>:</span>
+    <input class="inputWindow"  type = "number" maxlength="2" [(ngModel)]="min">
+    <span>:</span>
+    <input class="inputWindow"  type = "number" maxlength="2"[(ngModel)]="second">
+    <input class="inputWindow"  type = "text" maxlength="2" [(ngModel)]="ampm">
+  </div>
+
+  <button [style.display]="timeStart ? 'none' : 'block'" (click)="submitModification()">submit</button>
+</div>
