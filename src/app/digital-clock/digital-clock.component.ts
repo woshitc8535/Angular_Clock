@@ -12,11 +12,19 @@ export class DigitalClockComponent implements OnInit{
   public ampm: string;
   public timeStart = true;
 
+  private previousHour: any;
+  private previousMin: any;
+  private previousSecond: any;
+
   modifyTime() {
+    this.previousHour = this.hour;
+    this.previousMin = this.min;
+    this.previousSecond = this.second;
     this.timeStart = false;
   }
 
   submitModification() {
+    this.timeValidation();
     this.timeStart = true;
   }
   constructor() { }
@@ -69,5 +77,12 @@ export class DigitalClockComponent implements OnInit{
 
   format(num: number) {
     return (num + '').length === 1 ? '0' + num : num + '';
+  }
+  private timeValidation() {
+    if (this.hour > 12 || this.min >= 60 || this.second >= 60) {
+      this.hour = this.previousHour;
+      this.min = this.previousMin;
+      this.second = this.previousSecond;
+    }
   }
 }

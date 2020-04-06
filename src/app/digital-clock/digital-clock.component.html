@@ -10,13 +10,13 @@
   </div>
 
   <div class= "inputController"  [style.display]="timeStart ? 'none' : 'block'"  >
-    <input class="inputWindow"   type= "number" maxlength="2" [(ngModel)]="hour">
-    <span>:</span>
-    <input class="inputWindow"  type = "number" maxlength="2" [(ngModel)]="min">
-    <span>:</span>
-    <input class="inputWindow"  type = "number" maxlength="2"[(ngModel)]="second">
-    <input class="inputWindow"  type = "text" maxlength="2" [(ngModel)]="ampm">
-  </div>
+  <input class="inputWindow"   type= "number" maxlength="2" [(ngModel)]="hour">
+  <span>:</span>
+  <input class="inputWindow"  type = "number" maxlength="2" [(ngModel)]="min">
+  <span>:</span>
+  <input class="inputWindow"  type = "number" maxlength="2"[(ngModel)]="second">
+  <input class="inputWindow"  type = "text" maxlength="2" [(ngModel)]="ampm">
+</div>
 
   <button [style.display]="timeStart ? 'none' : 'block'" (click)="submitModification()">submit</button>
 </div>
