@@ -83,6 +83,7 @@ export class DigitalClockComponent implements OnInit{
       this.hour = this.previousHour;
       this.min = this.previousMin;
       this.second = this.previousSecond;
+      alert('Invalid Input!');
     }
   }
 }
